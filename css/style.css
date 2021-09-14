@@ -1,0 +1,342 @@
+/*---Roboto Font---*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap');
+
+/*---Reset CSS---*/
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/*---Utility Classes CSS---*/
+.primary__color{
+  color: #14afcb;
+  font-weight: 700;
+}
+
+.container{
+  max-width: 80%;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+h1,h2,h3{
+  padding: 25px 0;
+}
+
+/*---NavBar---*/
+nav {
+  background: #ffffff;
+  height: 80px;
+  width: 100%;
+}
+
+label.logo a {
+  color: #3f4c4e;
+  font-size: 35px;
+  line-height: 80px;
+  font-weight: 300;
+}
+
+nav ul {
+  float: right;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: #3f4c4e;
+  font-size: 17px;
+  padding: 7px 13px;
+  text-transform: uppercase;
+}
+
+a.active,
+a:hover {
+  color: #14afcb;
+  transition: 0.5s;
+}
+
+.checkBtn {
+  font-size: 30px;
+  color: #3f4c4e;
+  float: right;
+  line-height: 80px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+/*---Banner Section---*/
+.main__banner{
+  background:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../assets/img/image-1.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 80vh;
+  clip-path: polygon(100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);
+}
+
+.main__banner__container{
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.main__banner__heading{
+  font-size: 60px;
+  font-weight: 900;
+  color: #ffffff;
+  padding-top: 160px;
+}
+
+.btn{
+  display: inline-block;
+  padding: 15px 45px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin: 20px 0; 
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+.btn--primary{
+  background-color: #14afcb;
+  color: #ffffff;
+  border-bottom: 4px solid #037285;
+}
+
+.btn--primary:hover{
+  background-color: #1196ad;
+  color: #ffffff;
+}
+
+/*---Card Body Section---*/
+.card__section{
+  width: 100%;
+}
+
+.card__section__container{
+  width: 80%;
+  margin: 0 auto;
+  overflow: auto;
+  text-align: center;
+}
+
+.card__section__heading{
+  color: #14afcb;
+  font-weight: 700;
+  font-size: 55px;
+  text-transform: uppercase;
+  padding-top: 60px;
+  padding-bottom: 15px;
+}
+
+.card__section__subHeading{
+  color: #3f4c4e;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.card__section__description{
+  color: #3f4c4e;
+  font-size: 15px;
+  padding-top: 28px;
+  line-height: 25px;
+}
+
+.card__section__cardBody{
+  width: 100%;
+  display: flex;
+}
+
+.card__Section__logo{
+  background-color:  #14afcb;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  clip-path: polygon(50% 0, 100% 30%, 100% 70%, 50% 100%, 0 70%, 0 30%);
+  border: 5px solid #05889c;
+}
+
+.card__Section__logo i{
+  color: #ffffff;
+  font-size: 50px;
+  margin-top: 28px;
+}
+
+.card__section__block{
+  flex: 1;
+  padding: 50px;
+}
+
+.card__heading{
+  color: #14afcb;
+  font-size: 30px;
+  padding: 12px 0;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.card__content{
+  color: #3f4c4e;
+  font-size: 15px;
+  line-height: 23px;
+}
+
+/*---Media Query---*/
+@media (max-width: 1024px) {
+  label.logo a{
+    font-size: 28px;
+  }
+  nav ul li a {
+    font-size: 15px;
+  }
+  /*Banner Section*/
+  .main__banner__heading{
+    font-size: 50px;
+  }
+  /*Card Section*/
+  .card__section__heading{
+    font-size: 45px;
+  }
+  .card__heading{
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 900px) {
+  .checkBtn {
+    display: block;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #eeeeee;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+    z-index: 10;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  a:hover,
+  a.active {
+    color: #14afcb;
+    transition: 0.5s;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+  /*Banner Section*/
+  .main__banner__heading{
+    font-size: 40px;
+  }
+  /*Card Section*/
+  .card__section__heading{
+    font-size: 35px;
+  }
+  .card__heading{
+    font-size: 25px;
+  }
+  .card__section__block{
+    flex: 1;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  /*card section*/
+  .card__Section__logo{
+    width: 80px;
+    height: 80px;
+  }
+  .card__Section__logo i{
+    font-size: 30px;
+    margin-top: 20px;
+  }
+  .card__section__block{
+    padding: 20px;
+  }
+}
+
+@media (max-width: 575px) {
+  label.logo a{
+    font-size: 25px;
+  }
+  .checkBtn {
+    font-size: 28px;
+  }
+  /*Banner Section*/
+  .main__banner__heading{
+    font-size: 35px;
+    padding-top: 120px;
+  }
+  /*card section*/
+  .card__section__heading{
+    font-size: 30px;
+  }
+  .card__heading{
+    font-size: 20px;
+  }
+  .card__section__cardBody{
+    flex-direction: column;
+  }
+  .card__section__block{
+    padding: 30px;
+  }
+  .btn{
+    padding: 10px 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  label.logo a{
+    font-size: 23px;
+  }
+  .checkBtn {
+    font-size: 25px;
+  }
+  /*Banner Section*/
+  .main__banner__heading{
+    font-size: 30px;
+    padding-top: 100px;
+  }
+  /*card section*/
+  .card__section__cardBody{
+    flex-direction: column;
+  }
+  .card__section__block{
+    padding: 30px;
+  }
+  .card__section__heading{
+    font-size: 28px;
+  }
+  .card__heading{
+    font-size: 18px;
+  }
+}
